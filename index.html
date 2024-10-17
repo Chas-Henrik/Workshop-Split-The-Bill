@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="./js/DOMen.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Registreringsformulär</h2>
+  <form action="https://httpbin.org/anything" method="POST">   
+
+    <fieldset class="firstname">
+      <label for="firstname">Firstname:</label>
+      <input type="text" id="firstname" name="firstname">
+    </fieldset>
+
+    <fieldset class="lastname">
+      <label for="lastname">Lastname:</label>
+      <input type="text" id="lastname" name="lastname">
+    </fieldset>
+
+    <fieldset class="email">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </fieldset>
+
+    <fieldset class="message">
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" placeholder="Skriv något här"></textarea>
+    </fieldset>
+
+    <fieldset class="pet">
+      <label for="petSelect">Choose a pet:</label>
+      <select name="pet" id="petSelect">
+          <option value="dog">Dog</option>
+          <option value="hamster" selected>Hamster</option>
+          <option value="cat">Cat</option>
+          <option value="elephant">Elephant</option>
+      </select>
+    </fieldset>
+
+    <fieldset class="food">
+      <p>Choose food:</p>
+      <label for="pizza"><input type="radio" value="pizza" name="food" id="pizza" checked> Pizza</label>
+      <label for="pasta"><input type="radio" value="pasta" name="food" id="pasta"> Pasta</label>
+      <label for="broccoli"><input type="radio" value="broccoli" name="food" id="broccoli"> Broccoli</label>
+    </fieldset>
+
+    <fieldset class="send">
+    <button type="submit">Skicka</button>
+  </fieldset>
+  </form>
+
+</body>
+
+</html>

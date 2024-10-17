@@ -1,0 +1,117 @@
+
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Roboto, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  width: 50vw;
+  height: 80svh;
+  font-size: 1.6rem;
+  margin: 3rem auto;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  padding: 0.5em 0em;
+}
+
+.firstname {
+  grid-column: 1 / 2;
+}
+
+.lastname {
+  grid-column: 2 / 3;
+}
+
+.email {
+  grid-column: 1 / 2;
+}
+
+.message {
+  grid-column: 1 / span 2;
+}
+
+.pet {
+  grid-column: 1 / 2;
+}
+
+.food {
+  grid-column: 1 / 2;
+}
+
+.send {
+  grid-column: 1 / 2;
+}
+
+fieldset {
+  border: 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea
+{
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  transition: border-color 1s ease 300ms;
+}
+
+select {
+  padding: 0.5rem 1rem;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #000;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background-color: #FFF;
+  color: #000;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #CCC;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover
+{
+  border-color: #888;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus
+{
+  outline: none;
+  border: 2px solid blue;
+}
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+textarea:invalid
+{
+  outline: dashed red;
+}
+
