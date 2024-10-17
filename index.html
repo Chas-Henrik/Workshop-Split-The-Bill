@@ -5,56 +5,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/index.css" />
-  <script src="./js/DOMen.js" defer></script>
+  <script src="./js/script.js" defer></script>
   <title>Document</title>
 </head>
 
 <body>
-  <h2>Registreringsformulär</h2>
-  <form action="https://httpbin.org/anything" method="POST">   
+  <section id="formCard" class="card form-card">
+    <h1 class="title">Splitta notan</h1>
+    <form class="form" id="form">
+      <fieldset>
+        <label for="antal">Antal vänner</label>
+        <input type="number" id="antal" name="antal" required min="1">
+      </fieldset>
 
-    <fieldset class="firstname">
-      <label for="firstname">Firstname:</label>
-      <input type="text" id="firstname" name="firstname">
-    </fieldset>
+      <fieldset>
+        <label for="total">Totalsumma</label>
+        <input type="number" id="total" name="total" required min="1">
+      </fieldset>
 
-    <fieldset class="lastname">
-      <label for="lastname">Lastname:</label>
-      <input type="text" id="lastname" name="lastname">
-    </fieldset>
+      <fieldset>
+        <label for="dricks">Dricks</label>
+        <input type="number" id="dricks" name="dricks" required min="0">
+      </fieldset>
+      <button type="submit">Beräkna</button>
+    </form>
+  </section>
+  <section id="resultCard" class="card result-card">
+    <h1 class="title">Splitta notan</h1>
+    <button class="close" id="close">X</button>
 
-    <fieldset class="email">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
-    </fieldset>
+    <div class="content">
+      <div>
+        <p>Varje person ska betala</p>
+        <p id="totalPerPerson">240 kr</p>
+      </div>
 
-    <fieldset class="message">
-      <label for="message">Message:</label>
-      <textarea name="message" id="message" placeholder="Skriv något här"></textarea>
-    </fieldset>
-
-    <fieldset class="pet">
-      <label for="petSelect">Choose a pet:</label>
-      <select name="pet" id="petSelect">
-          <option value="dog">Dog</option>
-          <option value="hamster" selected>Hamster</option>
-          <option value="cat">Cat</option>
-          <option value="elephant">Elephant</option>
-      </select>
-    </fieldset>
-
-    <fieldset class="food">
-      <p>Choose food:</p>
-      <label for="pizza"><input type="radio" value="pizza" name="food" id="pizza" checked> Pizza</label>
-      <label for="pasta"><input type="radio" value="pasta" name="food" id="pasta"> Pasta</label>
-      <label for="broccoli"><input type="radio" value="broccoli" name="food" id="broccoli"> Broccoli</label>
-    </fieldset>
-
-    <fieldset class="send">
-    <button type="submit">Skicka</button>
-  </fieldset>
-  </form>
-
+      <div>
+        <p>Restarande skänks till välgörenhet</p>
+        <p id="charity">5 kr</p>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
